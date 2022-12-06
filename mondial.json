@@ -1,0 +1,226 @@
+{
+    "groupes":[
+        {
+            "groupe":"Groupe A",
+            "equipes":[
+                {
+                    "id":1,
+                    "equipe":"Qatar",
+                    "flag":"Qatar.jpg"
+                },
+                {
+                    "id":2,
+                    "equipe":"Equateur",
+                    "flag":"Ecuador.jpg"
+                },
+                {
+                    "id":3,
+                    "equipe":"Sénégal",
+                    "flag":"Senegal.jpg"
+                },
+                {
+                    "id":4,
+                    "equipe":"Pays-Bas",
+                    "flag":"Netherlands.jpg"
+                }
+            ]
+        },
+        {
+            "groupe":"Groupe B",
+            "equipes":[
+                {
+                    "id":5,
+                    "equipe":"Angleterre",
+                    "flag":"England.jpg"
+                },
+                {
+                    "id":6,
+                    "equipe":"Iran",
+                    "flag":"Iran.jpg"
+                },
+                {
+                    "id":7,
+                    "equipe":"Etats-Unis",
+                    "flag":"United_States.jpg"
+                },
+                {
+                    "id":8,
+                    "equipe":"Pays de Galles",
+                    "flag":"Wales.jpg"
+                }
+            ]
+        },
+        {
+            "groupe":"Groupe C",
+            "equipes":[
+                {
+                    "id":9,
+                    "equipe":"Argentine",
+                    "flag":"Argentina.jpg"
+                },
+                {
+                    "id":10,
+                    "equipe":"Arabie saoudite",
+                    "flag":"Saudi_Arabia.jpg"
+                },
+                {
+                    "id":11,
+                    "equipe":"Mexique",
+                    "flag":"Mexico.jpg"
+                },
+                {
+                    "id":12,
+                    "equipe":"Pologne",
+                    "flag":"Poland.jpg"
+                }
+            ]
+        },
+        {
+            "groupe":"Groupe D",
+            "equipes":[
+                {
+                    "id":13,
+                    "equipe":"France",
+                    "flag":"France.jpg"
+                },
+                {
+                    "id":14,
+                    "equipe":"Australie",
+                    "flag":"Australia.jpg"
+                },
+                {
+                    "id":15,
+                    "equipe":"Danemark",
+                    "flag":"Denmark.jpg"
+                },
+                {
+                    "id":16,
+                    "equipe":"Tunisie",
+                    "flag":"Tunisia.jpg"
+                }
+            ]
+        },
+        {
+            "groupe":"Groupe E",
+            "equipes":[
+                {
+                    "id":17,
+                    "equipe":"Espagne",
+                    "flag":"Spain.jpg"
+                },
+                {
+                    "id":18,
+                    "equipe":"Costa Rica",
+                    "flag":"Costa_Rica.jpg"
+                },
+                {
+                    "id":19,
+                    "equipe":"Allemagne",
+                    "flag":"Germany.jpg"
+                },
+                {
+                    "id":20,
+                    "equipe":"Japon",
+                    "flag":"Japan.jpg"
+                }
+            ]
+        },
+        {
+            "groupe":"Groupe F",
+            "equipes":[
+                {
+                    "id":21,
+                    "equipe":"Belgique",
+                    "flag":"Belgium.jpg"
+                },
+                {
+                    "id":22,
+                    "equipe":"Canada",
+                    "flag":"Canada.jpg"
+                },
+                {
+                    "id":23,
+                    "equipe":"Maroc",
+                    "flag":"Morocco.jpg"
+                },
+                {
+                    "id":24,
+                    "equipe":"Croatie",
+                    "flag":"Croatia.jpg"
+                }
+            ]
+        },
+        {
+            "groupe":"Groupe G",
+            "equipes":[
+                {
+                    "id":25,
+                    "equipe":"Brésil",
+                    "flag":"Brazil.jpg"
+                },
+                {
+                    "id":26,
+                    "equipe":"Serbie",
+                    "flag":"Serbia.jpg"
+                },
+                {
+                    "id":27,
+                    "equipe":"Suisse",
+                    "flag":"Switzerland.jpg"
+                },
+                {
+                    "id":28,
+                    "equipe":"Cameroun",
+                    "flag":"Cameroon.jpg"
+                }
+            ]
+        },
+        {
+            "groupe":"Groupe H",
+            "equipes":[
+                {
+                    "id":29,
+                    "equipe":"Portugal",
+                    "flag":"Portugal.jpg"
+                },
+                {
+                    "id":30,
+                    "equipe":"Ghana",
+                    "flag":"Ghana.jpg"
+                },
+                {
+                    "id":31,
+                    "equipe":"Uruguay",
+                    "flag":"Uruguay.jpg"
+                },
+                {
+                    "id":32,
+                    "equipe":"Corée du Sud",
+                    "flag":"South_Korea.jpg"
+                }
+            ]
+        }
+    ],
+    "huitieme":[
+        {
+            "id":1,
+            "Groupe1":"Groupe A",
+            "Groupe2":"Groupe B"
+        },
+        {
+            "id":2,
+            "Groupe1":"Groupe C",
+            "Groupe2":"Groupe D"
+        },
+        {
+            "id":3,
+            "Groupe1":"Groupe E",
+            "Groupe2":"Groupe F"
+        },
+        {
+            "id":4,
+            "Groupe1":"Groupe G",
+            "Groupe2":"Groupe H"
+        }
+    ]
+}
