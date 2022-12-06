@@ -326,13 +326,20 @@ body{
 .table tbody tr{
     background-color: #EDE8EB;
 }
+.huit-match-container{
+    background-color: black;
+    width: 30%;
+    min-width: 23rem;
+}
 .huit-match{
+    width: 100%;
     display: flex;
     align-items: center;
     padding: 5px;
     color: white;
 }
 .equipe-flag{
+    width: 100%;
     display: flex;
     align-items: center;
 }
@@ -340,9 +347,29 @@ body{
     height: 1.5rem;
     margin: .5rem;
 }
+.huit-score{
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
 .separator{
     height: .5px;
     background-color: #BE7291;
+}
+.final-result-container{
+    height: 100%;
+    text-align: center;
+}
+.final-result-container h1{
+    color: #E3A83E;
+}
+.final-result-container h2{
+    font-size: 32px;
+}
+.final-result-container img{
+    height: 50%;
 }
 @font-face {
     font-family: 'Roboto';

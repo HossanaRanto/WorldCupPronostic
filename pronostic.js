@@ -7,6 +7,7 @@ const huitieme=await response.huitieme
 export let matches_groupes=[]
 
 export let GameIsStarted=false
+export let Huitieme,Quart,Demi,Final,Winner=null
 
 function penalty(){
     let a,b=0
@@ -14,7 +15,7 @@ function penalty(){
         a=Math.floor(Math.random() * (6))
         b=Math.floor(Math.random() * (6))
     }
-    while(a==b || a==0 || b==0)
+    while(a==b)
 
     return {penaltyA:a,penaltyB:b}
 }
@@ -53,13 +54,8 @@ function checkwinner(match){
     else if(match.equipe_a.score<match.equipe_b.score){
         return match.equipe_b
     }
-    //Si match nul et pas de penalty
-    else if(match.equipe_a.score==match.equipe_b.score && !match.equipe_a.penalty){
-        return null
-    }
-
     //Si match nul avec penalty
-    else if(match.equipe_a.score==match.equipe_b.score && match.equipe_a.penalty){
+    else if(match.equipe_a.score==match.equipe_b.score){
         if(match.equipe_a.penalty>match.equipe_b.penalty){
             return match.equipe_a
         }
@@ -217,9 +213,8 @@ function quart_final(huitfinal){
         const gagnant=checkwinner(match)
         quart.push(gagnant.equipe)
     })
-
     for(let i=0;i<quart.length;i+=2){
-        const match=makeamatch(quart[i],quart[i+2],true)
+        const match=makeamatch(quart[i],quart[i+1],true)
         quartmatch.push(match)
     }
     return quartmatch;
@@ -231,9 +226,8 @@ function demi_final(quart){
         const gagnant=checkwinner(match)
         demi.push(gagnant.equipe)
     })
-
     for(let i=0;i<demi.length;i+=2){
-        const match=makeamatch(demi[i],demi[i+2],true)
+        const match=makeamatch(demi[i],demi[i+1],true)
         demifinalmatch.push(match)
     }
     return demifinalmatch;
@@ -265,11 +259,15 @@ export function startgame(){
     matches_groupes=match_group_all()
     order_all_groupes_point()
 
-    const huit = huit_final()
-    const quart = quart_final(huit)
-    const demi= demi_final(quart)
-    const finale=Finale(demi)
-    console.log(finale.gagnant)
+    Huitieme = huit_final()
+    Quart = quart_final(Huitieme)
+    Demi= demi_final(Quart)
+    Final=Finale(Demi)
+
+    console.log(Final)
+    Winner = Final.gagnant
+
+    //Appeler l'évenement pour terminer le pronostic
     document.dispatchEvent(pronosticEnd)
 }
 

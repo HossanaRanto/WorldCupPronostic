@@ -5,7 +5,9 @@ import {
     order_groupe, 
     groupe_match_detail,
     startgame,
-    GameIsStarted} from './pronostic.js'
+    GameIsStarted,
+    Winner
+} from './pronostic.js'
 
 
 
@@ -20,10 +22,39 @@ document.addEventListener('start',e=>{
 
 DisplayGroupe()
 
+//Evenement lorsque le pronostic commence
 const btn=document.querySelector("#start-game")
 btn.addEventListener("click",e=>{
     startgame()
 })
+
+//Evenement lorsque le pronostic est finie
+document.addEventListener("pronostic-end",e=>{
+    const modal=document.querySelector("#final-result")
+    const winner_h2=document.querySelector("#winner")
+    winner_h2.textContent=Winner.equipe.equipe
+    modal.showModal()
+})
+
+//Femer le modal d'affichage du résultat finale
+const close_result_modal=document.querySelector("#close-result-modal")
+close_result_modal.addEventListener("click",e=>{
+    const modal=document.querySelector("#final-result")
+    //Fermer le modal
+    modal.setAttribute("closing", "");
+            
+    //Lorsque l'animation du modal est fini
+    modal.addEventListener(
+    "animationend",
+    () => {
+        modal.removeAttribute("closing");
+        modal.close();
+    },
+    { once: true }
+    );
+})
+
+//Afficher tous les groupes (poules)
 function DisplayGroupe(){
     const groupe_section=document.querySelector("#groupe-content")
     groupes.forEach(groupe => {

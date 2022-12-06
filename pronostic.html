@@ -152,40 +152,49 @@
                 </div>
             </div>
             <div class="pronostic-section" id="huit-final">
-                <div>
-                    <h3>Huitième de Finale</h3>
                 <div class="huit-match-container">
-                    <div class="huit-match">
-                        <div class="equipe-flag">
-                            <h3>Equipe A</h3>
-                            <img src="flags/Argentina.jpg">
+                    <h3>Huitième de Finale</h3>
+                    <div>
+                        <div class="huit-match">
+                            <div class="equipe-flag">
+                                <h3>Equipe A</h3>
+                                <img src="flags/Argentina.jpg">
+                            </div>
+                            <div class="huit-score">
+                                <div class="score">
+                                    <span>0</span>
+                                    <span>0</span>
+                                </div>
+                                <div class="penalty">
+                                    <h4>Penalty</h4>
+                                    <span>0</span>
+                                    <span>0</span>
+                                </div>
+                            </div>
+                            <div class="equipe-flag">
+                                <img src="flags/Argentina.jpg">
+                                <h3>Equipe B</h3>
+                            </div>
                         </div>
-                        <div class="huit-score">
-                            <span>0</span>
-                            <span>0</span>
+                        <div class="separator"></div>
+                        <div class="huit-match">
+                            <div class="equipe-flag">
+                                <h3>Equipe A</h3>
+                                <img src="flags/Argentina.jpg">
+                            </div>
+                            <div class="huit-score">
+                                <div class="score">
+                                    <span>0</span>
+                                    <span>0</span>
+                                </div>
+                            </div>
+                            <div class="equipe-flag">
+                                <img src="flags/Argentina.jpg">
+                                <h3>Equipe B</h3>
+                            </div>
                         </div>
-                        <div class="equipe-flag">
-                            <img src="flags/Argentina.jpg">
-                            <h3>Equipe B</h3>
-                        </div>
+                        <div class="separator"></div>
                     </div>
-                    <div class="separator"></div>
-                    <div class="huit-match">
-                        <div class="equipe-flag">
-                            <h3>Equipe A</h3>
-                            <img src="flags/Argentina.jpg">
-                        </div>
-                        <div class="huit-score">
-                            <span>0</span>
-                            <span>0</span>
-                        </div>
-                        <div class="equipe-flag">
-                            <img src="flags/Argentina.jpg">
-                            <h3>Equipe B</h3>
-                        </div>
-                    </div>
-                    <div class="separator"></div>
-                </div>
                 </div>
             </div>
         </div>
@@ -240,6 +249,16 @@
                     </table>
                 </div>
             </div>
+        </div>
+    </dialog>
+
+    <!--Popup pour afficher le résultat final-->
+    <dialog class="modal result-modal" id="final-result">
+        <button class="close-modal" id="close-result-modal">&times;</button>
+        <div class="final-result-container">
+            <img src="qatar.png">
+            <h1>Félicitation</h1>
+            <h2 id="winner">Equipe Gagnant</h2>
         </div>
     </dialog>
 </body>
