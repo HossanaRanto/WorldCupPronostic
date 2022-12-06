@@ -1,12 +1,15 @@
 import {
     groupes,
-    match_group_all,
     stat_groupe,
     order_groupe, 
     groupe_match_detail,
     startgame,
     GameIsStarted,
-    Winner
+    Huitieme,
+    Quart,
+    Demi,
+    Winner,
+    Final
 } from './pronostic.js'
 
 
@@ -26,6 +29,10 @@ DisplayGroupe()
 const btn=document.querySelector("#start-game")
 btn.addEventListener("click",e=>{
     startgame()
+    huitfinal()
+    quartfinal()
+    demifinal()
+    finale()
 })
 
 //Evenement lorsque le pronostic est finie
@@ -167,4 +174,68 @@ function tablepointgroup(points){
                     </tr>`
         tbody.innerHTML+=row
     })
+}
+
+//Les matches 
+//Template d'un match
+function Match(match){
+    //Si il y avait un penalty
+    const penalty=match.equipe_a.penalty==undefined ?"":`
+                    <div class="penalty">
+                        <h4>Penalty</h4>
+                        <span>${match.equipe_a.penalty}</span>
+                        <span>${match.equipe_b.penalty}</span>
+                    </div>`
+
+    //Un match
+    const match_div=`
+                <div class="phase-finale-match">
+                <div class="equipe-flag flag-right">
+                    <h3>${match.equipe_a.equipe.equipe}</h3>
+                    <img src="flags/${match.equipe_a.equipe.flag}">
+                </div>
+                <div class="phase-finale-score">
+                    <div class="score">
+                        <span>${match.equipe_a.score}</span>
+                        <span>${match.equipe_b.score}</span>
+                    </div>
+                    ${penalty}
+                </div>
+                <div class="equipe-flag flag-left">
+                    <img src="flags/${match.equipe_b.equipe.flag}">
+                    <h3>${match.equipe_b.equipe.equipe}</h3>
+                </div>
+            </div>`
+    return match_div
+}
+
+//Ajouter tous les matches dans un container
+function addmatchestocontainer(containerselector,matches){
+    const container=document.querySelector(containerselector)
+    container.innerHTML=""
+    matches.forEach(match=>{
+        const match_div=Match(match)
+        container.innerHTML+=match_div
+        container.innerHTML+="<div class='separator'></div>"
+    })
+}
+
+//Huitième de finale
+function huitfinal(){
+    
+    addmatchestocontainer("#huit-container",Huitieme)
+}
+//Quart de finale
+function quartfinal(){
+    addmatchestocontainer("#quart-container",Quart)
+}
+
+//Demi finale
+function demifinal(){
+    addmatchestocontainer("#demi-container",Demi)
+}
+//Final
+function finale(){
+    const container=document.querySelector("#finale-container")
+    container.innerHTML=Match(Final.match)
 }
