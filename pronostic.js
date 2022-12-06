@@ -9,12 +9,12 @@ export let matches_groupes=[]
 export let GameIsStarted=false
 
 function penalty(){
-    const a=Math.floor(Math.random() * (6))
-    const b=Math.floor(Math.random() * (6))
-    if(a==b){
-        console.log("same")
-        return penalty()
+    let a,b=0
+    do{
+        a=Math.floor(Math.random() * (6))
+        b=Math.floor(Math.random() * (6))
     }
+    while(a==b || a==0 || b==0)
 
     return {penaltyA:a,penaltyB:b}
 }
@@ -269,6 +269,7 @@ export function startgame(){
     const quart = quart_final(huit)
     const demi= demi_final(quart)
     const finale=Finale(demi)
+    console.log(finale.gagnant)
     document.dispatchEvent(pronosticEnd)
 }
 

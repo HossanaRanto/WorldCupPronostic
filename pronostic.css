@@ -326,6 +326,24 @@ body{
 .table tbody tr{
     background-color: #EDE8EB;
 }
+.huit-match{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    color: white;
+}
+.equipe-flag{
+    display: flex;
+    align-items: center;
+}
+.equipe-flag img{
+    height: 1.5rem;
+    margin: .5rem;
+}
+.separator{
+    height: .5px;
+    background-color: #BE7291;
+}
 @font-face {
     font-family: 'Roboto';
     src:  url('fonts/Roboto-Light.ttf'),
