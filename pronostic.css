@@ -74,7 +74,11 @@ body{
   }
 .pronostic-links{
     width: 100%;
-    height: 5rem;
+    position: fixed;
+    background-color: white;
+    top: 0;
+    text-align: center;
+    box-shadow: 20px 10px 10px rgba(0, 0, 0, 0.503);
 }
 .pronostic-link-container{
     width: 100%;
@@ -82,6 +86,31 @@ body{
     display: flex;
     justify-content: left;
     align-items: center;
+    text-align: center;
+}
+.pronostic-link-container a{
+    width: 100%;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: #82224495;
+    height: 1rem;
+    color: white;
+    padding: 1rem;
+}
+.start-game{
+    background-color: #822243;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    color: white;
+    width: 25%;
+    min-width: 400px;
+}
+@media screen and (max-width:400px) {
+    .pronostic-link-container{
+        display: grid;
+        
+    }
 }
 .links{
     background-color: #5D001D;
@@ -103,6 +132,7 @@ body{
 .pronostic-container{
     overflow: hidden;
     scroll-behavior: smooth;
+    margin-top: 5rem;
 }
 .pronostic-section{
     width: 100%;
