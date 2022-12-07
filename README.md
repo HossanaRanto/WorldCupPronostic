@@ -1,7 +1,6 @@
 # WorldCupPronostic
-Faire un pronostic de la coupe du monde Qatar 2022. Un pronostic sur Javascript, HTML5, CSS3 en utilisant des nombres aléatoires mais tout en respectant les normes de la FIFA.
+Make a prediction for the Qatar 2022 World Cup. A prediction on Javascript, HTML5, CSS3 using random numbers but while respecting FIFA standards.
 
-Le fichier pronostic.js est le module du projet. Il est chargé de traité les données (Backend si on peut dire)
-Le fichier main.js est chargé de liée le ficher pronostic.html et pronostic.js (intégration)
+The prognosis.js file is the project module. It is responsible for processing the data (Backend if we can say so) The main.js file is responsible for linking the pronostic.html and pronostic.js files (integration)
 
-Il est important dans lancer l'application sous un serveur sinon le module pronostic.js ne marchera pas
+It is important to launch the application under a server otherwise the prognosis.js module will not work
